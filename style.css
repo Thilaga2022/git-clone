@@ -43,6 +43,9 @@ body{
     gap: 10px;
     align-items: center;
 }
+.navbar__s4{
+    display: none;
+}
 
 /*My Learning Popup*/
 .mylearning{
@@ -56,7 +59,7 @@ body{
     padding: 10px;
     top: 150%;
     right: 0;
-    width: 100px;
+    width: 25%;
     display: none;
 }
 .mylearning:hover .mylearning__popup{
@@ -90,6 +93,7 @@ body{
     position: absolute;
     top: 150px;
     left: 20px;
+    text-wrap: wrap;
 
 }
 .recommended{
@@ -173,3 +177,35 @@ gap:5px;
     justify-content: space-between;
     align-items: center;
 }
+
+/* Media queries */
+@media screen and (max-width: 800px){
+body{
+    font-size: 10px; /*telling that when screen size becomes 800px ie on tablet view the body's font size will shrink to 10px*/
+}
+}
+
+@media screen  and (max-width: 600px){
+.course-card{
+    flex-basis: 40%;
+    flex-grow: 1;
+}
+.navbar__s2, .navbar__s3{
+    display: none;
+}
+.categories{
+    display: none;
+}
+.saleImage__offer{
+    top:70px;
+    height: 70px;
+    width: 40%;
+    
+}
+.navbar__s4{
+    display: block;
+}
+}
+    
+
+    
