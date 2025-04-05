@@ -77,6 +77,14 @@ body{
     background-color: #892DE1;
     border-radius: 20px;
     padding: 5px;
+    border: 1px solid #892DE1;
+}
+
+.categories p:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid #892DE1;
+    cursor: pointer;
 }
 .saleImage img{
     width: 100%;
@@ -94,8 +102,26 @@ body{
     top: 150px;
     left: 20px;
     text-wrap: wrap;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0; /*offer image will not be visible in the begining*/
+    animation-fill-mode: forwards; /*This will keep the image forever after animation hits 100%. So it will always be visible*/
 
 }
+
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;  /*Will zoom in here but once it hits 100% the default/initial opacity will be applied ref. line 99. So the image will disappear*/
+    }
+}
+
+
+
 .recommended{
     padding:10px;
    
